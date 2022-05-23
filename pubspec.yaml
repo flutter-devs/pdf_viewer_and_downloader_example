@@ -38,7 +38,6 @@ dependencies:
   file_picker: ^4.5.1
   flutter_pdfview: ^1.2.2
   http: ^0.13.4
-  image_gallery_saver: ^1.7.1
   path_provider: ^2.0.10
   path: ^1.8.0
   permission_handler: ^9.2.0
@@ -67,6 +66,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/logo.png
+    - assets/powered_by.png
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

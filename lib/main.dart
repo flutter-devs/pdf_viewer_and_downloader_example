@@ -7,6 +7,7 @@ import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf_viewer_and_downloader_example/pdf_viewer_page.dart';
 import 'package:http/http.dart' as http;
+import 'package:pdf_viewer_and_downloader_example/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Pdf Viewer & Downloader'),
+      home: const Splash(),
     );
   }
 }
@@ -31,7 +32,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
     Key? key,
-    required String title,
   }) : super(key: key);
 
   @override
