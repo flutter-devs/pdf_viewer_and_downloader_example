@@ -32,11 +32,11 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
         actions: [
           IconButton(
             onPressed: () async {
-              await saveVideo(widget.url, "sample.pdf");
+              await saveFile(widget.url, "sample.pdf");
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
                   content: Text(
-                    'success',
+                    'successfully saved to internal storage "PDF_Download" folder',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -52,7 +52,7 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
     );
   }
 
-  Future<bool> saveVideo(String url, String fileName) async {
+  Future<bool> saveFile(String url, String fileName) async {
     try {
       if (await _requestPermission(Permission.storage)) {
         Directory? directory;
